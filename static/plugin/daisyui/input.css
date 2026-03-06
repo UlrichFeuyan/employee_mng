@@ -3,5 +3,5 @@
 @source "../../templates/**/*.html";
 
 @plugin "./daisyui.mjs" {
-    themes: light --default, dark --prefersdark, forest;
+    themes: light --default, dark --prefersdark, forest, pastel, autumn, wireframe, cupcake, bumblebee, corporate, halloween, business, caramellatte, nord, silk, winter, dim, lofi;
 }
