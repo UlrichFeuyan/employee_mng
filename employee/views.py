@@ -37,3 +37,12 @@ def edit_employee(request, id):
     
     # Si on parvient à niveau dans l'exécution du code, c'est que soit le formulaire est invalide, soit aucune modifications n'a été apportées; on retourne donc l'objet form (comportant les données de l'instance d'Employee) au template form.html
     return render(request, "employee/form.html", {"form": form})
+
+def delete_employee(request, id):
+    # On récupère l'employer correspondant à l'id passer en paramètre de requête
+    employee = get_object_or_404(Employee, id=id)
+    if request.method == "POST":
+        employee.delete()
+        return redirect("employee:list_employee")
+    
+    return render(request, "employee/delete.html", {"emp": employee})

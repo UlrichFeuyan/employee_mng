@@ -7091,6 +7091,9 @@
       border-color: currentColor;
     }
   }
+  .border-accent {
+    border-color: var(--color-accent);
+  }
   .menu-active {
     :where(:not(ul, details, .menu-title, .btn))& {
       @layer daisyui.l1.l2 {
@@ -7247,6 +7250,9 @@
   }
   .bg-base-200 {
     background-color: var(--color-base-200);
+  }
+  .bg-base-300 {
+    background-color: var(--color-base-300);
   }
   .divider-accent {
     @layer daisyui.l1.l2 {
@@ -7663,6 +7669,9 @@
         font-size: 1.375rem;
       }
     }
+  }
+  .text-center {
+    text-align: center;
   }
   .file-input-lg {
     @layer daisyui.l1.l2 {
@@ -8261,6 +8270,15 @@
     @layer daisyui.l1.l2 {
       color: var(--color-warning);
     }
+  }
+  .text-accent {
+    color: var(--color-accent);
+  }
+  .text-info {
+    color: var(--color-info);
+  }
+  .text-primary {
+    color: var(--color-primary);
   }
   .uppercase {
     text-transform: uppercase;
@@ -9092,15 +9110,6 @@
     @layer daisyui.l1.l2 {
       &:is([type="checkbox"]), &:has([type="checkbox"]) {
         --size: calc(var(--size-selector, 0.25rem) * 4);
-      }
-    }
-  }
-  .\*\:btn-sm {
-    :is(& > *) {
-      @layer daisyui.l1.l2 {
-        --fontsize: 0.75rem;
-        --btn-p: 0.75rem;
-        --size: calc(var(--size-field, 0.25rem) * 8);
       }
     }
   }
